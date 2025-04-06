@@ -20,7 +20,7 @@ cents = cents % N
 Num_pennies = cents // P
 cents = cents % P
 
-print("your change will be:")
+print("Your change will be:")
 print(f"Q: {Num_quarters}")
 print(f"D: {Num_dimes}")
 print(f"N: {Num_nickels}")
