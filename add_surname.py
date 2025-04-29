@@ -6,17 +6,14 @@
 #              with the letter "K" using list comprehension.
 
 
-def add_surname(names):
-    """
-    Add "Kardashian" as the surname to names starting with 'K'.
+def add_surname(name):
+    """Appends the surname 'Smith' to a given first name.
 
-    Parameters:
-        names (list): A list of first names.
+    Args:
+        name (str): A first name.
 
     Returns:
-        list: A list of names with 'Kardashian' added to names starting with 'K'.
+        str: Full name with 'Smith' as the surname.
     """
-    return [name + " Kardashian" for name in names if name.startswith('K')]
-names = ["Kiki", "Krystal", "Pavel", "MaryKay", "Annie", "Koala"]
-result = add_surname(names)
-print("Names with surname added:", result)
+    return name + " Smith"
+

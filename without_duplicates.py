@@ -7,21 +7,20 @@
 #              unchanged.
 
 
-def without_duplicates(items):
-    """
-    Return a list with duplicates removed, keeping the order of first appearance.
+def remove_duplicates(items):
+    """Removes duplicate elements from a list while preserving order.
 
-    Parameters:
-        items (list): List with potential duplicates.
+    Args:
+        items (list): List that may contain duplicates.
 
     Returns:
-        list: New list with no duplicates.
+        list: List with duplicates removed.
     """
-    new_list = []
+    seen = set()
+    result = []
     for item in items:
-        if item not in new_list:
-            new_list.append(item)
-    return new_list
-my_list = [8, 'hello', 8, True, -1000000.4, 'hello', 8]
-result = without_duplicates(my_list)
-print("List without duplicates:", result)
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
+    return result
+
