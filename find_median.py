@@ -7,22 +7,22 @@
 #              odd and even length lists separately.
 
 
-def calculate_median(numbers):
-    """Calculates the median of a list of numbers.
+# find_median.py
 
-    Args:
-        numbers (list): List of numerical values.
+def find_median(numbers):
+    # Sort the list first
+    numbers.sort()
 
-    Returns:
-        float: The median value.
-    """
-    sorted_nums = sorted(numbers)
-    n = len(sorted_nums)
+    # Get the length of the list
+    n = len(numbers)
 
-    if n % 2 == 0:
-        median = (sorted_nums[n // 2 - 1] + sorted_nums[n // 2]) / 2
+    # If the number of elements is odd, return the middle element
+    if n % 2 != 0:
+        return numbers[n // 2]
+    # If the number of elements is even, return the average of the two middle elements
     else:
-        median = sorted_nums[n // 2]
+        middle1 = numbers[(n // 2) - 1]
+        middle2 = numbers[n // 2]
+        return (middle1 + middle2) / 2
 
-    return median
 
